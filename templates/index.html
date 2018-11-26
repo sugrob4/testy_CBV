@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}"/>
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" >
+</head>
+<body>
+{% autoescape off %}
+{% include 'authentication.html' %}
+{% block article %}{% endblock %}
+{% block secondehome %}{% endblock %}
+{% block spisok %}{% endblock %}
+{% block registration %}{% endblock %}
+{% endautoescape %}
+</body>
+</html>

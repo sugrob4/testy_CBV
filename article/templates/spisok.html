@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+<title>Список</title>
+{% block spisok %}
+<div class="link_to_home">
+    <p><a href="{% url 'secondehome' %}">Назад на Home</a></p>
+</div>
+{% load static %}
+<div class="detail_container">
+    <h1>{{ article.article_title }}</h1>
+    <img src="{% get_media_prefix %}{{ article.article_image }}">
+    <div class="detail_text">
+        {{ article.article_text }}
+    </div>
+    <p class="detail_date">{{ article.article_date }}</p>
+</div>
+<div class="comments">
+    <div class="add_comment">
+        <span class="text_add">Добавить коментарий</span>
+        <form action="{% url 'add_comment' article.id %}" method="post">{% csrf_token %}
+            {{ form.as_ul }}
+            <div class="submit_button">
+                <input type="submit" value="Отправить" name="send">
+            </div>
+        </form>
+    </div>
+    <div class="comments_container">
+        <span>Коментарии к статье количество: {{ commnets.count }}</span>
+        {% for c in commnets %}
+            <div class="user_login"><p>{{ c.login_user }}</p></div>
+            <p>{{ c.comments_text }}</p>
+        {% endfor %}
+        <a name="to_comment"></a>
+    </div>
+</div>
+{% endblock %}

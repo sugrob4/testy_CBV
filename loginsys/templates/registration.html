@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block registration %}
+<div class="reg_form">
+{% if not request.session.success_message %}
+    <form action="{% url 'registration' %}" method="post">
+        {% csrf_token %}
+        <ul class="fieldset_reg">
+            {{ form.as_ul }}
+        </ul>
+        <input type="submit" name="regsubmit" value="Зарегестрироваться">
+    </form>
+{% else %}
+    <div class="success_message"><p>{{ request.session.success_message }}</p></div>
+{% endif %}
+</div>
+<div class="backup_reg">
+    <a href="{% url 'article' %}">Назад на главную</a>
+</div>
+{% endblock %}

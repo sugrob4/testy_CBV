@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<div class="autorization">
+    <span>Автоизация</span>
+    {% if request.user.is_authenticated %}
+        <div class="logout_user">
+            <a href="{% url 'logout' %}" class="link_to_logout"> Выйти {{ request.user.username }}</a>
+        </div>
+    {% else %}
+        <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+            <div><label for="username">Введите ваш логин:</label></div>
+            <div><input type="text" name="username" placeholder="Введите логин"></div>
+            <div><label for="password">Введите ваш пароль:</label></div>
+            <div><input type="password" name="password" placeholder="Введите пароль"></div>
+            <div><input type="submit" value="Войти"></div>
+        </form>
+    {% endif %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="login_error">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+</div>

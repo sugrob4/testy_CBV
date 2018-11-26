@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+<title>{% block title %}SecondeHome{% endblock %}</title>
+{% block secondehome %}
+<div>
+    <p class="home_link">
+        <a href="{% url 'article' %}">Назад на главную</a>
+    </p>
+</div>
+<div>
+    {% load static %}
+    <img src="{% static "img/img1.png" %}">
+</div>
+<div class="article_container">
+    {% for art in articles %}
+        <p class="article_title">
+            <a href="{% url 'spisok' art.id art.browser_url %}">{{ art.article_title }}</a>
+        </p>
+        <img class="article_image" src="{% get_media_prefix %}{{ art.article_image }}">
+        <div class="article_text_container">
+        <p>{{ art.article_text|truncatewords_html:40 }}</p>
+        </div>
+        <a name="{{ art.id }}" class="ankor"></a>
+        <div class="article_like">
+            <a href="{% url 'add_like' art.id %}">
+                <img src="{% static 'img/like.svg' %}">
+                <span>{{ art.article_likes }}</span>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+<div class="pagination">
+{% if articles.paginator.num_pages > 1 %}
+    {% if articles.has_previous %}
+        <a href="{% url 'secondehome' %}">В начало</a>
+        {% if articles.number == 2 %}
+            <a href="{% url 'secondehome' %}">&laquo;&laquo;</a>
+        {% else %}
+            <a href="page={{ articles.previous_page_number }}">&laquo;&laquo;</a>
+        {% endif %}
+    {% endif %}
+    {% for page in articles.paginator.page_range %}
+        {% if page == articles.number %}
+            <span class="current">{{ page }}</span>
+        {% else %}
+            {% if page == 1 %}
+                <span><a href="{% url 'secondehome' %}">{{ page }}</a></span>
+            {% else %}
+                <span><a href="page={{ page }}">{{ page }}</a></span>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if articles.has_next %}
+        <span class="next"><a href="page={{ articles.next_page_number }}">&raquo;&raquo;</a></span>
+        {% if articles.paginator.num_pages %}
+            <span class="num_pages"><a href="page={{ articles.paginator.num_pages }}">В конец</a></span>
+        {% endif %}
+    {% endif %}
+{% endif %}
+</div>
+{% endblock %}

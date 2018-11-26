@@ -1,0 +1,95 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{-webkit-appearance:none;-moz-appearance:none;}
+input[type=search]{-moz-appearance:none;-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+textarea{overflow:auto;vertical-align:top;resize:vertical;}
+audio,canvas,video{display:inline;zoom:1;max-width:100%;}
+audio:not([controls]){display:none;height:0;}
+[hidden]{display:none;}
+html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+a:focus{outline:thin dotted;}
+img{border:0;-ms-interpolation-mode:bicubic;vertical-align:middle;}
+fieldset{border:0;margin:0;padding:0;}
+legend{border:0;white-space:normal;margin-left:-7px;padding:0;}
+button,input,select,textarea{font-size:100%;vertical-align:middle;margin:0;}
+button,input{line-height:normal;}
+button,select{text-transform:none;}
+button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;overflow:visible;}
+button[disabled],html input[disabled]{cursor:default;}
+input[type=checkbox],input[type=radio]{box-sizing:border-box;height:13px;width:13px;padding:0;}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html,button,input,select,textarea{color:#222;}
+.chromeframe{background:#ccc;color:#000;margin:.2em 0;padding:.2em 0;}
+:focus,a:active,a:hover{outline:0;}
+figure,form{margin:0;}
+::-moz-selection,::selection{background:#b3d4fc;text-shadow:none;}
+.main_container{margin:3em 2em;}
+.main_container p{text-align:center;font-weight:bold;}
+.main_link p{text-align:center;font-weight:bold;font-size:1.5em;}
+.main_link a,.link_to_home a{text-decoration:none;}
+.main_link a:hover,.link_to_home a:hover{text-decoration:underline;}
+.home_link,.link_to_home p{text-align:center;font-weight:bold;font-size:1.5em;margin:2em auto;}
+.article_title{font-size:1.6em;margin:1.5em 10em;text-align:center;}
+.article_title a{text-decoration:none;}
+.article_title a:hover{text-decoration:underline;color:darkcyan;}
+.article_container{margin-bottom:5em;}
+.article_container img{margin:0 auto;display:block;}
+.article_text_container{margin:2em 8em;}
+.article_text_container p{font-size:1.07em;line-height:1.1em;}
+.home_link a{text-decoration:none;}
+.home_link a:hover{text-decoration:underline;}
+.detail_container h1{font:normal 1.5em Georgia, serif;text-align:center;margin-bottom:1.5em;color:green;}
+.detail_container img{display:block;margin:0 auto;}
+.detail_text{margin:2em 5em;}
+.detail_text p{margin-top:1em;text-indent:0.5em;font-size:1.07em;line-height:1.1em;}
+.detail_date{margin-right:4em; text-align:right;}
+.comments{border-top:2px solid darkcyan;margin-top:2em;}
+.comments_container p{margin:auto 5em 3em 5em;border:1px dashed indigo;padding:1em;}
+.comments_container span,.add_comment .text_add{display:block;text-align:center;font:bold 1.1em Verdana, Geneva, sans-serif;margin:3em auto 1.5em auto;color:darkslateblue;}
+.add_comment{margin:2em auto auto 5em;}
+.add_comment li{list-style:none;}
+.add_comment input{margin:1em;}
+.add_comment input[type='email']{margin-left:1.1em;}
+.add_comment textarea{margin:1em auto auto 2.5em;}
+.submit_button{margin-left:8.9em;}
+.article_like{margin:1.5em 4em auto auto;text-align:right;}
+.article_like a{text-decoration:none;}
+.article_like a:hover{text-decoration:underline;}
+.article_like img{width:2em;display:unset;margin:0 0.5em 1em auto;}
+.article_like a span{font-size:1.9em;font-weight:bold;}
+a.ankor{top:-250px;position:relative;display:block;visibility:hidden;}
+.comments_container .user_login p{border:none;margin-bottom:0;font-size:1.2em;font-weight:bold;}
+.add_comment .submit_button{margin-top:1.8em;}
+.to_registration{text-align:center; margin:5em auto 0 auto;}
+.to_registration a{font-weight:bold; text-decoration:none;font-size:1.3em;}
+.to_registration a:hover{text-decoration:underline;}
+.autorization{position:absolute;top:10em;right:5em;border:2px solid darkblue;padding:1.7em;}
+.autorization span{font:normal 1.5em Verdana, Geneva, sans-serif;}
+.autorization div{margin-top:0.7em;}
+.autorization form{margin-top:0.9em;}
+.autorization input::placeholder{font-size:0.9em;}
+.logout_user{text-align:center;font-size:1.1em;}
+.logout_user a{text-decoration:none;}
+.logout_user a:hover{text-decoration:underline;}
+.autorization .login_error{color:red;margin-top:1em;font-size:1em;text-align:center;}
+.reg_form{margin:7em auto auto 8em;}
+.fieldset_reg li{list-style:none;}
+.fieldset_reg input{margin:1em;}
+.fieldset_reg .helptext{}
+#id_email{margin-left:6em;width:15em;}
+#id_password1{margin-left:5.3em;}
+.backup_reg{margin-top:5em;text-align:center;}
+.backup_reg a{font-size:1.5em;text-decoration:none;font-weight:bold;}
+.backup_reg a:hover{text-decoration:underline;}
+.reg_form .errorlist{color:red;font-size:1.2em !important;margin-bottom:2em;}
+.success_message{text-align:center;font-size:2em;margin-top:5em;color:darkred;}
+.pagination{text-align:center;margin:4em auto;font:bold 1.1em Verdana, Geneva, sans-serif;}
+.pagination a{margin:auto 0.4em;text-decoration:none;}
+.pagination a:hover{text-decoration:underline;}
